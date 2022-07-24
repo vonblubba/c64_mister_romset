@@ -57,3 +57,4 @@ build-iPhoneSimulator/
 
 # custom
 /data/Games/
+/generated_romset/

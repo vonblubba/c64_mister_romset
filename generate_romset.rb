@@ -3,7 +3,7 @@
 require 'csv'
 require 'pry'
 require './lib/unzip_rom'
-require './lib/process_roms'
+require './lib/process_rom'
 require './lib/create_romset_structure'
 
 CSV_PATH = [__dir__, 'data', 'sorted_games.csv'].join('/')
@@ -17,5 +17,5 @@ CSV.foreach(CSV_PATH, headers: true, col_sep: ';') do |row|
 
   puts "* processing game #{row['name']}"
   unzip_path = unzip_rom(game_name: row['name'], zip_path: row['filename'])
-  process_roms(row: row, unzip_path: unzip_path)
+  process_rom(row: row, unzip_path: unzip_path)
 end

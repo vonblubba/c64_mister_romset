@@ -13,7 +13,4 @@ def create_romset_structure
   [games_folder, demo_folder, cracktro_folder, utils_folder].map do |folder|
     FileUtils.mkdir_p(folder) unless File.directory?(folder)
   end
-
-  #FileUtils.mkdir_p([games_folder, '#'].join('/'))
-  #('A'..'Z').map { |letter| FileUtils.mkdir_p([games_folder, letter].join('/')) unless File.directory?([games_folder, letter].join('/')) }
 end

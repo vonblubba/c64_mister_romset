@@ -36,7 +36,7 @@ end
 # Current paths
 def current_subfolder_absolute_path
   current_subfolder = Dir.entries(current_letter_absolute_path).reject { |e| ['.', '..'].include? e }.sort.last
-  [current_letter_absolute_path, current_subfolder].join('/')
+  current_subfolder ? [current_letter_absolute_path, current_subfolder].join('/') : nil
 end
 
 def current_letter_absolute_path

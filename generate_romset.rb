@@ -19,3 +19,5 @@ CSV.foreach(CSV_PATH, headers: true, col_sep: ';') do |row|
   unzip_path = unzip_rom(game_name: row['name'], zip_path: row['filename'])
   process_rom(row: row, unzip_path: unzip_path)
 end
+
+rename_last_subfolders

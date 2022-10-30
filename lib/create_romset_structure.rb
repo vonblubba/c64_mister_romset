@@ -14,6 +14,6 @@ def create_romset_structure
     FileUtils.mkdir_p(folder) unless File.directory?(folder)
   end
 
-  FileUtils.mkdir_p([games_folder, '#'].join('/'))
-  ('A'..'Z').map { |letter| FileUtils.mkdir_p([games_folder, letter].join('/')) unless File.directory?([games_folder, letter].join('/')) }
+  #FileUtils.mkdir_p([games_folder, '#'].join('/'))
+  #('A'..'Z').map { |letter| FileUtils.mkdir_p([games_folder, letter].join('/')) unless File.directory?([games_folder, letter].join('/')) }
 end

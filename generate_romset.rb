@@ -6,7 +6,7 @@ require './lib/unzip_rom'
 require './lib/process_rom'
 require './lib/create_romset_structure'
 
-CSV_PATH = [__dir__, 'data', 'sorted_games.csv'].join('/')
+CSV_PATH = [__dir__, 'data', 'games_retry.csv'].join('/')
 
 puts '* Generating MiSTer romset...'
 

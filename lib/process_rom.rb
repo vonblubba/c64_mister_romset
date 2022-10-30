@@ -47,7 +47,7 @@ def last_game_in_current_subfolder
   return nil unless current_subfolder_absolute_path
 
   last_game = Dir.entries(current_subfolder_absolute_path).reject { |e| ['.', '..'].include? e }.sort.last
-  last_game ? sanitized_folder_name(folder_name: last_game).gsub(' ', '')[0..3].upcase : nil
+  last_game ? sanitized_folder_name(folder_name: last_game).gsub(' ', '')[0..5].upcase : nil
 end
 
 # Sanitizers
@@ -87,7 +87,7 @@ def needs_new_folder?
 end
 
 def shortened_game_name(row:)
-  sanitized_game_name(row: row).gsub(' ', '')[0..3].upcase
+  sanitized_game_name(row: row).gsub(' ', '')[0..5].upcase
 end
 
 def rename_last_subfolders
@@ -101,5 +101,5 @@ end
 
 def last_game_in_subfolder(path:)
   last_game = Dir.entries(path).reject { |e| ['.', '..'].include? e }.sort.last
-  last_game ? sanitized_folder_name(folder_name: last_game).gsub(' ', '')[0..3].upcase : nil
+  last_game ? sanitized_folder_name(folder_name: last_game).gsub(' ', '')[0..5].upcase : nil
 end
